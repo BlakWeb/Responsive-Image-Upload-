@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Image Upload</title>
+</head>
+<body>
+    
+    
+    <div class="hero">
+        <div class="card">
+            <h1>Osh Jahosh</h1>
+            <p>@oshjahosh</p>
+            <img src="profile.png" id="profile-pic">
+            <label for="input-file">update image</label>
+            <input type="file" accept="Image/png, Image/jpeg, Image/jpg, Image/webp" id="input-file">
+        </div>
+    </div>
+    <script>
+        let profilePic = document.getElementById("profile-pic");
+        let inputFile = document.getElementById("input-file");
+
+        inputFile.onchange = function(){
+            profilePic.src = URL.createObjectURL(inputFile.files[0]);
+        }
+    
+    </script>
+    
+</body>
+</html>
